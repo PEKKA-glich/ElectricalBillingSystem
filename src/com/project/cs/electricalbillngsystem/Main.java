@@ -21,7 +21,7 @@ import java.util.Scanner;
 
 
 class Main {
-    public static final String PATH = "C:\\Users\\pgarg";
+    public static final String PATH = "C:\\Users\\pgarg\\Desktop\\Java";
     private static ElectricityRates rates;
 
     public static void main(String[] args) throws Exception {
@@ -134,7 +134,7 @@ class Main {
         accObj.put("Rates", houseBill.getElectricityRates().getRates());
         //Creating file object which is creating an JSON file in machine
         File file = new File(
-                PATH + "\\IdeaProjects\\ElectricalBillingSystem\\data\\" +
+                PATH + "\\Electricity-Billing-System\\data\\" +
                         houseBill.getAccId() + ".json");
         //Creating fileWriter obj containing above .json file
         FileWriter writer = new FileWriter(file);
@@ -152,7 +152,7 @@ class Main {
     public static void getData(int accountId) throws IOException, ParseException {
         //Creating file object containing an Account aka HouseBill
         File file = new File(
-                PATH + "\\IdeaProjects\\ElectricalBillingSystem\\data\\" +
+                PATH + "\\Electricity-Billing-System\\data\\" +
                         accountId + ".json");
         //If file present in machine than retrieve data
         if (file.exists()) {
@@ -181,7 +181,7 @@ class Main {
 
     public static void deleteData(int userId) {
         //Creating file obj to userId.json
-        File file = new File(PATH + "\\IdeaProjects\\ElectricalBillingSystem\\data\\" + userId + ".json");
+        File file = new File(PATH + "\\Electricity-Billing-System\\data\\" + userId + ".json");
         if (file.exists()) {
             try {
                 file.delete();
@@ -208,7 +208,7 @@ class Main {
         accObj.put("Rates", houseBill.getElectricityRates().getRates());
         //Creating file object which is creating an JSON file in machine
         File file = new File(
-                PATH + "\\IdeaProjects\\ElectricalBillingSystem\\data\\" +
+                PATH + "\\Electricity-Billing-System\\data\\" +
                         houseBill.getAccId() + ".json");
         //Creating fileWriter obj containing above .json file
         FileWriter writer = new FileWriter(file);
@@ -224,19 +224,19 @@ class Main {
     }
 
     public static void deleteAll() throws IOException {
-        File file = new File(PATH + "\\IdeaProjects\\ElectricalBillingSystem\\data");
+        File file = new File(PATH + "\\Electricity-Billing-System\\data");
         try {
             file.delete();
         } catch (SecurityException e) {
             System.out.print("Security reasons action cannot be done......");
         }
-        file = new File(PATH + "\\IdeaProjects\\ElectricalBillingSystem\\data");
+        file = new File(PATH + "\\Electricity-Billing-System\\data");
         try {
             file.mkdir();
         } catch (SecurityException e) {
             System.out.print("Security reasons action cannot be done......");
         }
-        file = new File(PATH + "\\IdeaProjects\\ElectricalBillingSystem\\data\\CrucialData.json");
+        file = new File(PATH + "\\Electricity-Billing-System\\data\\CrucialData.json");
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("idCounter", "1");
         FileWriter writer = new FileWriter(file);

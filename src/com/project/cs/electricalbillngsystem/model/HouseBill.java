@@ -11,7 +11,7 @@ import java.io.IOException;
 
 //Model class of house aka bill per user
 public class HouseBill {
-    public static final String PATH = "C:\\Users\\pgarg";
+    public static final String PATH = "C:\\Users\\pgarg\\Desktop\\Java";
     private String accName;
     private String address;
     private int accId;
@@ -39,7 +39,7 @@ public class HouseBill {
 
 
         //Setting id Counter "Its a bit messy but it'll do the job"
-        File idCounterFile = new File(PATH + "\\IdeaProjects\\ElectricalBillingSystem\\data\\CrucialData.json");
+        File idCounterFile = new File(PATH + "\\Electricity-Billing-System\\data\\CrucialData.json");
         FileReader reader = new FileReader(idCounterFile);
         JSONObject jsonObject = (JSONObject) new JSONParser().parse(reader);
         String string = (String) jsonObject.get("idCounter");

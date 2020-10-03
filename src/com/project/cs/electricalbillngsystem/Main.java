@@ -108,7 +108,6 @@ class Main {
             }
             default -> {
                 System.out.print("This does not exist...");
-                main(new String[]{});
             }
         }
         System.out.print("\nRun programme again(Y/N): ");

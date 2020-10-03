@@ -35,9 +35,9 @@ class Main {
                 "5: To delete all accounts (Admin only)" + "\n" +
                 "6: Change Electricity rates (Admins only) - Default is Rajasthan 10(INR/kWh)" + "\n");
         Scanner input = new Scanner(System.in);
-        int enterInput = input.nextInt();
+        String enterInput = input.next();
         switch (enterInput) {
-            case 99 -> {
+            case "99" -> {
 //                System.out.print("99: To show all commands" + "\n" +
 //                        "1: To register for our Billing service (Creating an Account)" + "\n" +
 //                        "2: To get Account details" + "\n" +
@@ -47,7 +47,7 @@ class Main {
 //                        "6: Change Electricity rates (Admins only) - Default is Rajasthan 10(INR/kWh)" + "\n");
                 main(new String[]{});
             }
-            case 1 -> {
+            case "1" -> {
                 Scanner insertScanner = new Scanner(System.in);
                 System.out.print("Enter Name of Account (First name): ");
                 String accName = insertScanner.next();
@@ -63,21 +63,21 @@ class Main {
                 HouseBill houseBill = new HouseBill(accName, address, city, state, postalCode, rates);
                 insertData(houseBill);
             }
-            case 2 -> {
+            case "2" -> {
                 Scanner getDataScanner = new Scanner(System.in);
                 System.out.print("Enter Account ID: ");
                 int accId = getDataScanner.nextInt();
 
                 getData(accId);
             }
-            case 3 -> {
+            case "3" -> {
                 Scanner deleteDataScanner = new Scanner(System.in);
                 System.out.print("Enter Account ID: ");
                 int accId = deleteDataScanner.nextInt();
 
                 deleteData(accId);
             }
-            case 4 -> {
+            case "4" -> {
                 Scanner updateScanner = new Scanner(System.in);
                 System.out.print("Enter Account ID: ");
                 int accId = updateScanner.nextInt();
@@ -95,9 +95,10 @@ class Main {
                 HouseBill houseBill = new HouseBill(accName, address, accId, city, state, postalCode, rates);
                 updateData(houseBill);
             }
-            case 5 -> {
+            case "5" -> {
                 Scanner admin = new Scanner(System.in);
 
+                System.out.print("Enter password: ");
                 String password = admin.next();
                 if (adminCheck(password)) {
                     deleteAll();

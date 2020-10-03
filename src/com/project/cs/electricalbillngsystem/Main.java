@@ -27,7 +27,7 @@ class Main {
     public static void main(String[] args) throws Exception {
         rates = new ElectricityRates("Rajasthan", 10);
 
-        System.out.print("99: To show all commands" + "\n" +
+        System.out.print( "\n\n\n\n\n" + "99: To show all commands" + "\n" +
                 "1: To register for our Billing service (Creating an Account)" + "\n" +
                 "2: To get Account details" + "\n" +
                 "3: To de-register for Billing service (Delete Account)" + "\n" +
@@ -38,13 +38,13 @@ class Main {
         int enterInput = input.nextInt();
         switch (enterInput) {
             case 99 -> {
-                System.out.print("99: To show all commands" + "\n" +
-                        "1: To register for our Billing service (Creating an Account)" + "\n" +
-                        "2: To get Account details" + "\n" +
-                        "3: To de-register for Billing service (Delete Account)" + "\n" +
-                        "4: To Update Account details" + "\n" +
-                        "5: To delete all accounts (Admin only)" + "\n" +
-                        "6: Change Electricity rates (Admins only) - Default is Rajasthan 10(INR/kWh)" + "\n");
+//                System.out.print("99: To show all commands" + "\n" +
+//                        "1: To register for our Billing service (Creating an Account)" + "\n" +
+//                        "2: To get Account details" + "\n" +
+//                        "3: To de-register for Billing service (Delete Account)" + "\n" +
+//                        "4: To Update Account details" + "\n" +
+//                        "5: To delete all accounts (Admin only)" + "\n" +
+//                        "6: Change Electricity rates (Admins only) - Default is Rajasthan 10(INR/kWh)" + "\n");
                 main(new String[]{});
             }
             case 1 -> {
@@ -175,7 +175,7 @@ class Main {
         }
         //Else show file does not exist in machine message in console
         else {
-            System.out.print("Account ID does not exists.....");
+            System.out.print("Account ID does not exist.....");
         }
     }
 
